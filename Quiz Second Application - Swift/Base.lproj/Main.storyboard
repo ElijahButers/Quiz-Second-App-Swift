@@ -4,34 +4,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="1zn-GE-ghu">
+        <!--View Controller-->
+        <scene sceneID="fza-5Y-B1b">
             <objects>
-                <tableViewController id="KwX-NQ-Irx" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="C5O-Hl-VuY">
+                <viewController id="OyT-et-hpk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fsH-LQ-lju"/>
+                        <viewControllerLayoutGuide type="bottom" id="eSA-QG-qqi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y8n-6c-GrS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Et1-iq-9OS">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Et1-iq-9OS" id="KPW-8e-i3A">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="KwX-NQ-Irx" id="yGd-au-6SW"/>
-                            <outlet property="delegate" destination="KwX-NQ-Irx" id="L9t-ux-dPH"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="TQc-kW-pRP"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oOj-KK-CRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5tD-y6-gkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736" y="217"/>
+            <point key="canvasLocation" x="758" y="224"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jZd-pP-kEh">
@@ -41,9 +30,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="KwX-NQ-Irx" kind="relationship" relationship="rootViewController" id="xqj-wP-Gr3"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q80-By-O5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
