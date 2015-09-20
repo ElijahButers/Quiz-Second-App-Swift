@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="fza-5Y-B1b">
             <objects>
-                <viewController id="OyT-et-hpk" sceneMemberID="viewController">
+                <viewController id="OyT-et-hpk" customClass="ViewController" customModule="Quiz_Second_Application___Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fsH-LQ-lju"/>
                         <viewControllerLayoutGuide type="bottom" id="eSA-QG-qqi"/>
@@ -22,6 +22,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCv-ak-9kX">
+                                <rect key="frame" x="20" y="116" width="46" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <segue destination="lmc-WY-gC0" kind="show" id="Mau-rW-6E7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -29,12 +36,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tD-y6-gkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="-136"/>
+            <point key="canvasLocation" x="219" y="-136"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="w9t-rb-FD5">
             <objects>
-                <viewController id="lmc-WY-gC0" sceneMemberID="viewController">
+                <viewController id="lmc-WY-gC0" customClass="SettingsViewController" customModule="Quiz_Second_Application___Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XIO-iX-T6C"/>
                         <viewControllerLayoutGuide type="bottom" id="j3q-xg-wmS"/>
