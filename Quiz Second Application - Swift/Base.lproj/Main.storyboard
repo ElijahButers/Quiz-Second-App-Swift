@@ -42,7 +42,7 @@
         <!--Settings View Controller-->
         <scene sceneID="w9t-rb-FD5">
             <objects>
-                <viewController id="lmc-WY-gC0" customClass="SettingsViewController" customModule="Quiz_Second_Application___Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingsViewController" id="lmc-WY-gC0" customClass="SettingsViewController" customModule="Quiz_Second_Application___Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XIO-iX-T6C"/>
                         <viewControllerLayoutGuide type="bottom" id="j3q-xg-wmS"/>
@@ -51,18 +51,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syq-lX-nQB">
-                                <rect key="frame" x="0.0" y="548" width="600" height="52"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="xPE-et-4pL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Play">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFN-m7-y5R">
                                 <rect key="frame" x="0.0" y="72" width="600" height="111"/>
                                 <subviews>
@@ -78,6 +66,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="gameModeButtonHadler:" destination="lmc-WY-gC0" eventType="touchUpInside" id="TEt-mv-3Bq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -101,6 +92,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="gameModeButtonHadler:" destination="lmc-WY-gC0" eventType="touchUpInside" id="oWq-3D-b56"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -124,6 +118,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="gameModeButtonHadler:" destination="lmc-WY-gC0" eventType="touchUpInside" id="pj9-gI-7IB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -147,6 +144,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="gameModeButtonHadler:" destination="lmc-WY-gC0" eventType="touchUpInside" id="niD-yO-01m"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -155,6 +155,21 @@
                                     <constraint firstItem="PaY-JX-DK8" firstAttribute="centerX" secondItem="7C0-ZJ-RxR" secondAttribute="centerX" id="Zd1-pR-Tjr"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syq-lX-nQB">
+                                <rect key="frame" x="0.0" y="548" width="600" height="52"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="xPE-et-4pL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonHandler:" destination="lmc-WY-gC0" eventType="touchUpInside" id="QdT-bY-y8v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -179,15 +194,21 @@
                             <constraint firstItem="CaM-I6-tUG" firstAttribute="top" secondItem="f8j-4r-km8" secondAttribute="bottom" constant="8" id="zvj-0f-gYJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="gameModeButtons" destination="ylw-Nl-l2c" collectionClass="NSMutableArray" id="rcC-B4-sCH"/>
+                        <outletCollection property="gameModeButtons" destination="PaY-JX-DK8" collectionClass="NSMutableArray" id="eRa-bF-joD"/>
+                        <outletCollection property="gameModeButtons" destination="Mx8-RE-Mrd" collectionClass="NSMutableArray" id="q5g-P4-Ahr"/>
+                        <outletCollection property="gameModeButtons" destination="wSS-be-064" collectionClass="NSMutableArray" id="sjb-WV-Kfv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWK-sJ-3gZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="891" y="-133"/>
         </scene>
-        <!--View Controller-->
+        <!--Multiple Choice-->
         <scene sceneID="8RA-Sc-ld8">
             <objects>
-                <viewController id="Wdn-k8-Lam" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="multipleChoiceViewController" title="Multiple Choice" id="Wdn-k8-Lam" customClass="MultipleChoiceViewController" customModule="Quiz_Second_Application___Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Pk-af-4ah"/>
                         <viewControllerLayoutGuide type="bottom" id="mEq-WG-EjD"/>
@@ -202,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="1553" y="-805"/>
         </scene>
-        <!--View Controller-->
+        <!--Right Or Wrong-->
         <scene sceneID="xm1-q9-nNh">
             <objects>
-                <viewController id="ge7-6P-nha" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rightOrWrongViewController" title="Right Or Wrong" id="ge7-6P-nha" customClass="RightOrWrongViewController" customModule="Quiz_Second_Application___Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aw5-Fk-qS7"/>
                         <viewControllerLayoutGuide type="bottom" id="U1D-M5-X0K"/>
@@ -220,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="1549" y="-136"/>
         </scene>
-        <!--View Controller-->
+        <!--Input Quiz-->
         <scene sceneID="QhQ-Ck-3OH">
             <objects>
-                <viewController id="7AD-Zw-Dwo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="inputViewController" title="Input Quiz" id="7AD-Zw-Dwo" customClass="InputViewController" customModule="Quiz_Second_Application___Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lk3-Pf-lO6"/>
                         <viewControllerLayoutGuide type="bottom" id="ypW-aZ-iTg"/>
@@ -238,10 +259,10 @@
             </objects>
             <point key="canvasLocation" x="1549" y="1260"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Quiz-->
         <scene sceneID="yHx-ZE-t9a">
             <objects>
-                <viewController id="WMH-D6-VBz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="imageViewController" title="Image Quiz" id="WMH-D6-VBz" customClass="ImageViewController" customModule="Quiz_Second_Application___Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tCb-oI-4r3"/>
                         <viewControllerLayoutGuide type="bottom" id="Zez-wr-NFM"/>
