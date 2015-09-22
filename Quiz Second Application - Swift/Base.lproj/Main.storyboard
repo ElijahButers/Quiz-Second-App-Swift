@@ -223,12 +223,43 @@
                     <view key="view" contentMode="scaleToFill" id="rQr-3o-Wvs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7M-Hj-rrP">
+                                <rect key="frame" x="16" y="72" width="568" height="206"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhF-2v-yri">
+                                <rect key="frame" x="16" y="302" width="568" height="206"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcN-lx-BbT">
+                                <rect key="frame" x="16" y="532" width="568" height="48"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="QZW-uh-7PV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k7M-Hj-rrP" firstAttribute="top" secondItem="2Pk-af-4ah" secondAttribute="bottom" constant="8" id="3ok-WE-cbl"/>
+                            <constraint firstItem="tcN-lx-BbT" firstAttribute="leading" secondItem="rQr-3o-Wvs" secondAttribute="leadingMargin" constant="-4" id="Bdi-y9-nxk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tcN-lx-BbT" secondAttribute="trailing" constant="-4" id="Fj0-z1-UeS"/>
+                            <constraint firstItem="k7M-Hj-rrP" firstAttribute="leading" secondItem="rQr-3o-Wvs" secondAttribute="leadingMargin" constant="-4" id="JIn-bb-YiS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k7M-Hj-rrP" secondAttribute="trailing" constant="-4" id="WMc-V7-lbI"/>
+                            <constraint firstItem="WhF-2v-yri" firstAttribute="leading" secondItem="rQr-3o-Wvs" secondAttribute="leadingMargin" constant="-4" id="X9g-Bl-NGY"/>
+                            <constraint firstItem="tcN-lx-BbT" firstAttribute="top" secondItem="WhF-2v-yri" secondAttribute="bottom" constant="24" id="djY-BM-gEX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WhF-2v-yri" secondAttribute="trailing" constant="-4" id="iDc-OA-Who"/>
+                            <constraint firstItem="mEq-WG-EjD" firstAttribute="top" secondItem="tcN-lx-BbT" secondAttribute="bottom" constant="20" id="jcf-Gf-eCN"/>
+                            <constraint firstItem="WhF-2v-yri" firstAttribute="top" secondItem="k7M-Hj-rrP" secondAttribute="bottom" constant="24" id="k7o-nN-pDN"/>
+                            <constraint firstItem="WhF-2v-yri" firstAttribute="height" secondItem="k7M-Hj-rrP" secondAttribute="height" id="qbz-jT-kKc"/>
+                        </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujr-pL-eRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1553" y="-805"/>
+            <point key="canvasLocation" x="1549" y="-803"/>
         </scene>
         <!--Right Or Wrong-->
         <scene sceneID="xm1-q9-nNh">
