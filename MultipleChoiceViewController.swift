@@ -14,6 +14,7 @@ class MultipleChoiceViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "Night sky-png")!)
     }
 
     override func didReceiveMemoryWarning() {
