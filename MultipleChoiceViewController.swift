@@ -10,16 +10,43 @@ import UIKit
 
 class MultipleChoiceViewController: UIViewController {
 
+    @IBOutlet weak var questionLabel: UILabel!
+    
+    @IBOutlet var answerButtons: [UIButton]!
+    @IBAction func answerButtonHandler(sender: UIButton) {
+        
+        if sender.titleLabel?.text == correctAnswer {
+            print("Correct")
+        } else {
+            print("Wrong Answer")
+        }
+    }
+
+    var correctAnswer = "2015"
+    
+    var answers = ["1990", "1995", "2005", "2015"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor(patternImage: UIImage(named: "Night sky-png")!)
+        
+        titlesForButtons()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func titlesForButtons() {
+        for (idx, button) in EnumerateSequence(answerButtons) {
+            button.setTitle(answers[idx], forState: .Normal)
+        }
+        
+        questionLabel.text = "What year is it?"
     }
     
 
