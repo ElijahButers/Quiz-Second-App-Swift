@@ -383,7 +383,7 @@
                                         </constraints>
                                     </progressView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="nFJ-zX-57H" firstAttribute="leading" secondItem="RDV-2d-lNL" secondAttribute="leading" constant="8" id="2WC-z0-zZq"/>
                                     <constraint firstAttribute="trailing" secondItem="nFJ-zX-57H" secondAttribute="trailing" constant="8" id="ZR4-Fy-SSh"/>
@@ -394,10 +394,11 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3L-X2-9XV">
                                 <rect key="frame" x="16" y="72" width="568" height="206"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwk-C2-w4N">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwk-C2-w4N">
                                 <rect key="frame" x="26" y="82" width="547" height="186"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -416,6 +417,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonHandler:" destination="ge7-6P-nha" eventType="touchUpInside" id="EPf-3k-cEO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axb-GN-bF5">
                                         <rect key="frame" x="148" y="105" width="272" height="89"/>
@@ -424,9 +428,12 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonHandler:" destination="ge7-6P-nha" eventType="touchUpInside" id="Ho6-9O-Sh9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Axb-GN-bF5" firstAttribute="top" secondItem="d1a-ba-9x5" secondAttribute="bottom" constant="8" id="Jd3-AL-KMG"/>
                                     <constraint firstItem="Axb-GN-bF5" firstAttribute="leading" secondItem="d1a-ba-9x5" secondAttribute="leading" id="Kfs-XE-Xio"/>
@@ -457,6 +464,11 @@
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="questionLabel" destination="vwk-C2-w4N" id="kRo-mk-HFj"/>
+                        <outletCollection property="answersButtons" destination="d1a-ba-9x5" collectionClass="NSMutableArray" id="HKR-x3-Aru"/>
+                        <outletCollection property="answersButtons" destination="Axb-GN-bF5" collectionClass="NSMutableArray" id="dMX-fS-Pzp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kzm-kS-6uj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

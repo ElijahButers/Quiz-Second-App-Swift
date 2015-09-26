@@ -10,11 +10,31 @@ import UIKit
 
 class RightOrWrongViewController: UIViewController {
 
+    @IBOutlet weak var questionLabel: UILabel!
+    
+    @IBOutlet var answersButtons: [UIButton]!
+    
+    @IBAction func answerButtonHandler(sender: UIButton) {
+        
+        if sender.titleLabel?.text == correctAnswer {
+            print("Correct")
+        } else {
+            print("Wrong")
+        }
+    }
+    
+    var correctAnswer = "Right"
+    
+    var answers = ["Wrong", "Right"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor(patternImage: UIImage(named: "Night sky-png")!)
+        
+        titlesForButtons()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +42,13 @@ class RightOrWrongViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func titlesForButtons() {
+        for (idx, button) in EnumerateSequence(answersButtons) {
+            button.setTitle(answers[idx], forState: .Normal)
+        }
+        
+        questionLabel.text = "Barack Obama is the president of the United States of America"
+    }
 
     /*
     // MARK: - Navigation
