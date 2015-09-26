@@ -235,7 +235,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="g0s-jc-h2d" secondAttribute="trailing" constant="8" id="JZd-Ji-tmf"/>
                                     <constraint firstItem="g0s-jc-h2d" firstAttribute="top" secondItem="VeA-ZG-oHp" secondAttribute="top" constant="8" id="RQb-QQ-us8"/>
@@ -291,7 +291,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="XUx-wG-4dJ" firstAttribute="top" secondItem="cSB-aA-lQK" secondAttribute="bottom" constant="12" id="0HL-27-jtN"/>
                                     <constraint firstItem="aMB-vd-pu5" firstAttribute="top" secondItem="EZD-Tn-lHs" secondAttribute="top" constant="8" id="0dO-6b-lhQ"/>
@@ -323,7 +323,7 @@
                                         </constraints>
                                     </progressView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="7rY-Sy-iWh" secondAttribute="trailing" constant="8" id="LBn-oQ-jdT"/>
                                     <constraint firstItem="7rY-Sy-iWh" firstAttribute="leading" secondItem="Gzw-Ge-gXB" secondAttribute="leading" constant="8" id="gLq-ht-LU8"/>
@@ -695,6 +695,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButtonHandler:" destination="WMH-D6-VBz" eventType="touchUpInside" id="Zp4-GT-t7t"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8w-IU-PZX">
                                 <rect key="frame" x="306" y="296" width="272" height="89"/>
@@ -703,6 +706,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButtonHandler:" destination="WMH-D6-VBz" eventType="touchUpInside" id="skM-9L-KGd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-eE-R0m">
                                 <rect key="frame" x="26" y="397" width="272" height="89"/>
@@ -711,6 +717,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButtonHandler:" destination="WMH-D6-VBz" eventType="touchUpInside" id="BMZ-1q-1QT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHV-0O-yK9">
                                 <rect key="frame" x="306" y="397" width="272" height="89"/>
@@ -719,6 +728,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButtonHandler:" destination="WMH-D6-VBz" eventType="touchUpInside" id="AJC-97-kuT"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ma-3p-YPd">
                                 <rect key="frame" x="16" y="500" width="568" height="86"/>
@@ -778,6 +790,13 @@
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imageView" destination="xwt-Zx-ULM" id="NaU-i6-fIK"/>
+                        <outletCollection property="answersButtons" destination="Afw-HN-MSw" collectionClass="NSMutableArray" id="PEn-Rh-iKX"/>
+                        <outletCollection property="answersButtons" destination="N8w-IU-PZX" collectionClass="NSMutableArray" id="DOU-Ki-gO2"/>
+                        <outletCollection property="answersButtons" destination="7dm-eE-R0m" collectionClass="NSMutableArray" id="yxC-C0-czT"/>
+                        <outletCollection property="answersButtons" destination="jHV-0O-yK9" collectionClass="NSMutableArray" id="qpV-ip-CCZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2y-UK-tFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
