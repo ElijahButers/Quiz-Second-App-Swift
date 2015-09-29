@@ -29,6 +29,36 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func loadQuizData() {
+        //Multiple Choice Data
+        let pathMC = NSBundle.mainBundle().pathForResource("MultipleChoice", ofType: "plist")
+        let dictMC = NSDictionary(contentsOfFile: pathMC!)
+        mcArray = dictMC!["Questions"]!.mutableCopy() as? Array
+        
+        //Single Choice Data
+        let pathSC = NSBundle.mainBundle().pathForResource("SingleChoice", ofType: "plist")
+        let dictSC = NSDictionary(contentsOfFile: pathSC!)
+        scArray = dictSC!["Questions"]!.mutableCopy() as? Array
+        
+        //Right Or Wrong Data
+        let pathROW = NSBundle.mainBundle().pathForResource("RightOrWrong", ofType: "plist")
+        let dictROW = NSDictionary(contentsOfFile: pathROW!)
+        rowArray = dictROW!["Questions"]!.mutableCopy() as? Array
+        
+        //Image Quiz Data
+        let pathIMG = NSBundle.mainBundle().pathForResource("ImageQuiz", ofType: "plist")
+        let dictIMG = NSDictionary(contentsOfFile: pathIMG!)
+        imgArray = dictIMG!["Questions"]!.mutableCopy() as? Array
+        
+    }
+    
+    func check() {
+        print(mcArray)
+        print(scArray)
+        print(imgArray)
+        print(rowArray)
+    }
 
 
 }

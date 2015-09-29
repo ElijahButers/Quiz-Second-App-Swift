@@ -22,9 +22,18 @@ class MultipleChoiceViewController: UIViewController {
         }
     }
 
-    var correctAnswer = "2015"
+    @IBOutlet weak var cardButton: UIButton!
     
-    var answers = ["1990", "1995", "2005", "2015"]
+    @IBAction func cardButtonHandler(sender: UIButton) {
+    }
+    
+    //var correctAnswer = "2015"
+    var correctAnswer: String?
+    var question: String?
+    //var answers = ["1990", "1995", "2005", "2015"]
+    var answers = [String]()
+    
+    var questionIdx = 0
     
     
     override func viewDidLoad() {
