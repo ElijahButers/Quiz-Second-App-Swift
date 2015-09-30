@@ -12,20 +12,46 @@ class RightOrWrongViewController: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel!
     
-    @IBOutlet var answersButtons: [UIButton]!
+    @IBOutlet var answerButtons: [UIButton]!
     
     @IBAction func answerButtonHandler(sender: UIButton) {
+        
         
         if sender.titleLabel?.text == correctAnswer {
             print("Correct")
         } else {
-            print("Wrong")
+            sender.backgroundColor = UIColor.redColor()
+            print("Wrong Answer")
         }
+        for button in answerButtons {
+            button.enabled = false
+            if button.titleLabel?.text == correctAnswer {
+                button.backgroundColor = UIColor.greenColor()
+            }
+        }
+        cardButton.enabled = true
     }
     
-    var correctAnswer = "Right"
+    @IBOutlet weak var cardButton: UIButton!
+    
+    @IBAction func cardButtonHandler(sender: UIButton) {
+        
+        cardButton.enabled = true
+        if questionIdx < (rowArray?.count)! - 1 {
+            questionIdx++
+        } else {
+            questionIdx = 0
+        }
+        nextQuestion()
+    }
+    
+    var correctAnswer: String?
+    
+    var question: String?
     
     var answers = ["Wrong", "Right"]
+    
+    var questionIdx = 0
     
     
     override func viewDidLoad() {
@@ -42,12 +68,23 @@ class RightOrWrongViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func nextQuestion() {
+        
+        let currentQuestion = rowArray![questionIdx]
+        correctAnswer = currentQuestion["CorrectAnswer"] as? String
+        question = currentQuestion["Question"] as? String
+        
+        titlesForButtons()
+    }
     func titlesForButtons() {
-        for (idx, button) in EnumerateSequence(answersButtons) {
+        for (idx, button) in EnumerateSequence(answerButtons) {
+            button.titleLabel?.lineBreakMode = .ByWordWrapping
             button.setTitle(answers[idx], forState: .Normal)
+            button.enabled = true
+            button.backgroundColor = UIColor(red: 83.0/255.0, green: 184.0/255.0, blue: 224.0/225.0, alpha: 1.0)
         }
         
-        questionLabel.text = "Barack Obama is the president of the United States of America"
+        questionLabel.text = question
     }
 
     /*

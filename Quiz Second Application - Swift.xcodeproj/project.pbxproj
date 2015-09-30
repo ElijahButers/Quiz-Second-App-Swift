@@ -22,6 +22,9 @@
 		E2DD545C1BAE916E00A71037 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DD545B1BAE916E00A71037 /* InputViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		E2E04C501BB913DB00EFCC1C /* MultipleChoice.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E04C4F1BB913DB00EFCC1C /* MultipleChoice.plist */; settings = {ASSET_TAGS = (); }; };
 		E2E04C521BB961C800EFCC1C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E04C511BB961C800EFCC1C /* Configuration.swift */; settings = {ASSET_TAGS = (); }; };
+		E2E0EE4E1BBBCBDC00D64695 /* SingleChoice.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E0EE4D1BBBCBDC00D64695 /* SingleChoice.plist */; settings = {ASSET_TAGS = (); }; };
+		E2E0EE501BBBCBF700D64695 /* RightOrWrong.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E0EE4F1BBBCBF700D64695 /* RightOrWrong.plist */; settings = {ASSET_TAGS = (); }; };
+		E2E0EE521BBBCC0E00D64695 /* ImageQuiz.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E0EE511BBBCC0E00D64695 /* ImageQuiz.plist */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		E2DD545B1BAE916E00A71037 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputViewController.swift; path = ../InputViewController.swift; sourceTree = "<group>"; };
 		E2E04C4F1BB913DB00EFCC1C /* MultipleChoice.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MultipleChoice.plist; sourceTree = "<group>"; };
 		E2E04C511BB961C800EFCC1C /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		E2E0EE4D1BBBCBDC00D64695 /* SingleChoice.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SingleChoice.plist; sourceTree = "<group>"; };
+		E2E0EE4F1BBBCBF700D64695 /* RightOrWrong.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RightOrWrong.plist; sourceTree = "<group>"; };
+		E2E0EE511BBBCC0E00D64695 /* ImageQuiz.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ImageQuiz.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 		E27F9AA31BA94EAB008CB950 /* Quiz Second Application - Swift */ = {
 			isa = PBXGroup;
 			children = (
+				E2E0EE4C1BBBCABA00D64695 /* Resources */,
 				E204F4331BAEC6D900B9AAA3 /* Images! */,
 				E27F9AA41BA94EAB008CB950 /* AppDelegate.swift */,
 				E27F9AA61BA94EAB008CB950 /* ViewController.swift */,
@@ -97,9 +104,19 @@
 				E2E04C511BB961C800EFCC1C /* Configuration.swift */,
 				E27F9AAD1BA94EAB008CB950 /* LaunchScreen.storyboard */,
 				E27F9AB01BA94EAB008CB950 /* Info.plist */,
-				E2E04C4F1BB913DB00EFCC1C /* MultipleChoice.plist */,
 			);
 			path = "Quiz Second Application - Swift";
+			sourceTree = "<group>";
+		};
+		E2E0EE4C1BBBCABA00D64695 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2E04C4F1BB913DB00EFCC1C /* MultipleChoice.plist */,
+				E2E0EE4D1BBBCBDC00D64695 /* SingleChoice.plist */,
+				E2E0EE4F1BBBCBF700D64695 /* RightOrWrong.plist */,
+				E2E0EE511BBBCC0E00D64695 /* ImageQuiz.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E204F4311BAEC6C900B9AAA3 /* Night sky-png@2x.png in Resources */,
+				E2E0EE501BBBCBF700D64695 /* RightOrWrong.plist in Resources */,
+				E2E0EE4E1BBBCBDC00D64695 /* SingleChoice.plist in Resources */,
+				E2E0EE521BBBCC0E00D64695 /* ImageQuiz.plist in Resources */,
 				E2E04C501BB913DB00EFCC1C /* MultipleChoice.plist in Resources */,
 				E27F9AAF1BA94EAB008CB950 /* LaunchScreen.storyboard in Resources */,
 				E204F4301BAEC6C900B9AAA3 /* Green-Starry-iPhone-6-plus-wallpaper-ilikewallpaper_com.png in Resources */,

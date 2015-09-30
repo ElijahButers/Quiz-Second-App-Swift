@@ -18,13 +18,29 @@ class MultipleChoiceViewController: UIViewController {
         if sender.titleLabel?.text == correctAnswer {
             print("Correct")
         } else {
+            sender.backgroundColor = UIColor.redColor()
             print("Wrong Answer")
         }
+        for button in answerButtons {
+            button.enabled = false
+            if button.titleLabel?.text == correctAnswer {
+                button.backgroundColor = UIColor.greenColor()
+            }
+        }
+        cardButton.enabled = true
     }
 
     @IBOutlet weak var cardButton: UIButton!
     
     @IBAction func cardButtonHandler(sender: UIButton) {
+        
+        cardButton.enabled = true
+        if questionIdx < (mcArray?.count)! - 1 {
+            questionIdx++
+        } else {
+            questionIdx = 0
+        }
+        nextQuestion()
     }
     
     //var correctAnswer = "2015"
@@ -42,6 +58,7 @@ class MultipleChoiceViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor(patternImage: UIImage(named: "Night sky-png")!)
         
+        cardButton.enabled = false
         titlesForButtons()
     }
 
@@ -50,12 +67,25 @@ class MultipleChoiceViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func nextQuestion() {
+        let currentQuestion = mcArray![questionIdx]
+        
+        answers = currentQuestion["Answers"] as! [String]
+        correctAnswer = currentQuestion["CorrectAnswer"] as? String
+        question = currentQuestion["Question"] as? String
+        
+        titlesForButtons()
+    }
+    
     func titlesForButtons() {
         for (idx, button) in EnumerateSequence(answerButtons) {
+            button.titleLabel?.lineBreakMode = .ByWordWrapping
             button.setTitle(answers[idx], forState: .Normal)
+            button.enabled = true
+            button.backgroundColor = UIColor(red: 83.0/255.0, green: 184.0/255.0, blue: 224.0/225.0, alpha: 1.0)
         }
         
-        questionLabel.text = "What year is it?"
+        questionLabel.text = question
     }
     
 

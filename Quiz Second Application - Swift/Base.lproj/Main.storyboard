@@ -450,15 +450,25 @@
                                     <constraint firstItem="Axb-GN-bF5" firstAttribute="trailing" secondItem="d1a-ba-9x5" secondAttribute="trailing" id="hLW-0l-kgO"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdb-u9-msD">
+                                <rect key="frame" x="26" y="72" width="558" height="196"/>
+                                <connections>
+                                    <action selector="cardButtonHandler:" destination="ge7-6P-nha" eventType="touchUpInside" id="WsK-9V-jcB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="B3L-X2-9XV" firstAttribute="top" secondItem="aw5-Fk-qS7" secondAttribute="bottom" constant="8" id="0sI-7t-eDs"/>
                             <constraint firstItem="RDV-2d-lNL" firstAttribute="top" secondItem="mau-ww-OYk" secondAttribute="bottom" constant="8" id="1ah-GG-4ye"/>
+                            <constraint firstItem="tdb-u9-msD" firstAttribute="leading" secondItem="tUD-ML-SAv" secondAttribute="leadingMargin" constant="6" id="4pM-4S-H9B"/>
                             <constraint firstItem="vwk-C2-w4N" firstAttribute="top" secondItem="aw5-Fk-qS7" secondAttribute="bottom" constant="18" id="9dI-4K-E81"/>
                             <constraint firstItem="RDV-2d-lNL" firstAttribute="leading" secondItem="tUD-ML-SAv" secondAttribute="leadingMargin" constant="-4" id="AWq-uD-G31"/>
+                            <constraint firstItem="tdb-u9-msD" firstAttribute="top" secondItem="aw5-Fk-qS7" secondAttribute="bottom" constant="8" id="C6Z-Pv-kGI"/>
                             <constraint firstItem="mau-ww-OYk" firstAttribute="top" secondItem="vwk-C2-w4N" secondAttribute="bottom" constant="18" id="CPj-1Y-nf4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tdb-u9-msD" secondAttribute="trailing" constant="-4" id="Edc-UJ-YEl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="B3L-X2-9XV" secondAttribute="trailing" constant="-4" id="LR0-47-vQK"/>
+                            <constraint firstItem="mau-ww-OYk" firstAttribute="top" secondItem="tdb-u9-msD" secondAttribute="bottom" constant="18" id="T9g-K6-R42"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RDV-2d-lNL" secondAttribute="trailing" constant="-4" id="Uxv-qe-0Mt"/>
                             <constraint firstItem="vwk-C2-w4N" firstAttribute="leading" secondItem="tUD-ML-SAv" secondAttribute="leadingMargin" constant="6" id="VaC-r1-gnE"/>
                             <constraint firstItem="U1D-M5-X0K" firstAttribute="top" secondItem="RDV-2d-lNL" secondAttribute="bottom" constant="14" id="Y0l-db-ZhD"/>
@@ -472,9 +482,10 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="cardButton" destination="tdb-u9-msD" id="JDP-ih-erd"/>
                         <outlet property="questionLabel" destination="vwk-C2-w4N" id="kRo-mk-HFj"/>
-                        <outletCollection property="answersButtons" destination="d1a-ba-9x5" collectionClass="NSMutableArray" id="HKR-x3-Aru"/>
-                        <outletCollection property="answersButtons" destination="Axb-GN-bF5" collectionClass="NSMutableArray" id="dMX-fS-Pzp"/>
+                        <outletCollection property="answerButtons" destination="d1a-ba-9x5" collectionClass="NSMutableArray" id="OWJ-YF-A5u"/>
+                        <outletCollection property="answerButtons" destination="Axb-GN-bF5" collectionClass="NSMutableArray" id="N2B-zm-oad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kzm-kS-6uj" userLabel="First Responder" sceneMemberID="firstResponder"/>

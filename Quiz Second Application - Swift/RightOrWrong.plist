@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Questions</key>
+	<array>
+		<dict>
+			<key>CorrectAnswer</key>
+			<string>Right</string>
+			<key>Question</key>
+			<string>Tokyo is most populated city in the world?</string>
+		</dict>
+		<dict>
+			<key>CorrectAnswer</key>
+			<string>Wrong</string>
+			<key>Question</key>
+			<string>Germany is currently the World's Champion in soccer?</string>
+		</dict>
+	</array>
+</dict>
+</plist>
