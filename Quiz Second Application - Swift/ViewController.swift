@@ -38,11 +38,11 @@ class ViewController: UIViewController {
         let dictMC = NSDictionary(contentsOfFile: pathMC!)
         mcArray = dictMC!["Questions"]!.mutableCopy() as? Array
         
-//        //Single Choice Data
-//        let pathSC = NSBundle.mainBundle().pathForResource("SingleChoice", ofType: "plist")
-//        let dictSC = NSDictionary(contentsOfFile: pathSC!)
-//        scArray = dictSC!["Questions"]!.mutableCopy() as? Array
-//        
+        //Single Choice Data
+        let pathSC = NSBundle.mainBundle().pathForResource("SingleChoice", ofType: "plist")
+        let dictSC = NSDictionary(contentsOfFile: pathSC!)
+        scArray = dictSC!["Questions"]!.mutableCopy() as? Array
+        
         //Right Or Wrong Data
         let pathROW = NSBundle.mainBundle().pathForResource("RightOrWrong", ofType: "plist")
         let dictROW = NSDictionary(contentsOfFile: pathROW!)

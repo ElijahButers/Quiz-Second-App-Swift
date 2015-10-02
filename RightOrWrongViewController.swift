@@ -76,6 +76,7 @@ class RightOrWrongViewController: UIViewController {
         
         titlesForButtons()
     }
+    
     func titlesForButtons() {
         for (idx, button) in EnumerateSequence(answerButtons) {
             button.titleLabel?.lineBreakMode = .ByWordWrapping

@@ -16,9 +16,27 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var inputTextField: UITextField!
     
+    @IBOutlet weak var cardButton: UIButton!
+    
+    @IBAction func cardButtonHandler(sender: UIButton) {
+        
+        cardButton.enabled = true
+        if questionIdx < (scArray?.count)! - 1 {
+            questionIdx++
+        } else {
+            questionIdx = 0
+        }
+        
+        nextQuestion()
+    }
+    
     var enteredAnswer: String?
     
-    var correctAnswer = "Red"
+    var correctAnswer: String?
+    
+    var question: String?
+    
+    var questionIdx = 0
     
     
     override func viewDidLoad() {
@@ -32,6 +50,9 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         inputTextField.delegate = self
         
         titlesForLabels()
+        
+        cardButton.enabled = false
+        nextQuestion()
 
     }
 
@@ -40,10 +61,23 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func nextQuestion() {
+        
+        let currentQuestion = scArray![questionIdx]
+        
+        correctAnswer = currentQuestion["CorrectAnswer"] as? String
+        question = currentQuestion["Question"] as? String
+        
+        titlesForLabels()
+    }
+    
     func titlesForLabels() {
-        questionLabel.text = "What color is a tomato?"
+        questionLabel.text = question
         correctAnswerLabel.text = correctAnswer
         correctAnswerLabel.hidden = true
+        
+        inputTextField.text = nil
+        inputTextField.enabled = true
     }
     
     func keyboardWillShow(notification: NSNotification) {
@@ -69,16 +103,22 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         enteredAnswer = textField.text
         
+        textField.enabled = false
+        cardButton.enabled = true
+        
         checkForCorrectAnswer()
         return true
     }
     
     func checkForCorrectAnswer() {
-        if enteredAnswer == correctAnswer {
+        if enteredAnswer?.lowercaseString == correctAnswer!.lowercaseString {
             print("Right")
+            correctAnswerLabel.textColor = UIColor.greenColor()
         } else {
             print("Wrong")
+            correctAnswerLabel.textColor = UIColor.redColor()
         }
+        correctAnswerLabel.hidden = false
     }
 
     

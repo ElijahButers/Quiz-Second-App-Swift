@@ -513,6 +513,12 @@
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQJ-ZM-mxu">
+                                        <rect key="frame" x="8" y="8" width="552" height="190"/>
+                                        <connections>
+                                            <action selector="cardButtonHandler:" destination="7AD-Zw-Dwo" eventType="touchUpInside" id="J6W-IJ-0Kr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -592,6 +598,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="cardButton" destination="GQJ-ZM-mxu" id="j7x-F6-MFs"/>
                         <outlet property="correctAnswerLabel" destination="CkV-dA-iNV" id="KqZ-2F-g3N"/>
                         <outlet property="inputTextField" destination="LEw-mU-RUY" id="xj2-p3-MFX"/>
                         <outlet property="questionLabel" destination="MjT-Eg-KRp" id="0fo-dZ-dNz"/>

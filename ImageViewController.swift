@@ -23,9 +23,13 @@ class ImageViewController: UIViewController {
         }
     }
     
-    var correctAnswer = "Hammer"
+    var correctAnswer: String?
     
     var answers = ["Screwdriver", "Hammer", "Saw", "Wrench"]
+    
+    var question: String?
+    
+    var questionIdx = 0
     
     
     override func viewDidLoad() {
@@ -41,6 +45,16 @@ class ImageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func nextQuestion() {
+        
+        let currentQuestion = scArray![questionIdx]
+        correctAnswer = currentQuestion["CorrectAnswer"] as? String
+        question = currentQuestion["Question"] as? String
+        
+        titlesForButtons()
+    }
+
     
     func titlesForButtons() {
         for (idx, button) in EnumerateSequence(answersButtons) {
