@@ -19,13 +19,38 @@ class ImageViewController: UIViewController {
         if sender.titleLabel?.text == correctAnswer {
             print("Correct")
         } else {
+            sender.backgroundColor = UIColor.redColor()
             print("Wrong")
+        }
+        
+        for button in answersButtons {
+            button.enabled = false
+            if button.titleLabel?.text == correctAnswer {
+                button.backgroundColor = UIColor.greenColor()
+            }
         }
     }
     
+
+    @IBOutlet weak var cardButton: UIButton!
+    
+    @IBAction func cardButtonHandler(sender: UIButton) {
+        
+        cardButton.enabled = true
+        if questionIdx < (imgArray?.count)! - 1 {
+            questionIdx++
+        } else {
+            questionIdx = 0
+        }
+        nextQuestion()
+    }
+    
+    
     var correctAnswer: String?
     
-    var answers = ["Screwdriver", "Hammer", "Saw", "Wrench"]
+    var answers = [String]()
+    
+    var image: String?
     
     var question: String?
     
@@ -38,7 +63,8 @@ class ImageViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor(patternImage: UIImage(named: "Night sky-png")!)
         
-        titlesForButtons()
+        cardButton.enabled = false
+        nextQuestion()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,9 +74,9 @@ class ImageViewController: UIViewController {
     
     func nextQuestion() {
         
-        let currentQuestion = scArray![questionIdx]
+        let currentQuestion = imgArray![questionIdx]
         correctAnswer = currentQuestion["CorrectAnswer"] as? String
-        question = currentQuestion["Question"] as? String
+        image = currentQuestion["Question"] as? String
         
         titlesForButtons()
     }
@@ -58,10 +84,13 @@ class ImageViewController: UIViewController {
     
     func titlesForButtons() {
         for (idx, button) in EnumerateSequence(answersButtons) {
+            button.titleLabel?.lineBreakMode = .ByWordWrapping
             button.setTitle(answers[idx], forState: .Normal)
+            button.enabled = true
+            button.backgroundColor = UIColor(red: 83.0/255.0, green: 184.0/255.0, blue: 224.0/255.0, alpha: 1.0)
         }
         
-        imageView.image = UIImage(named: "hammer")
+        imageView.image = UIImage(named: image!)
     }
 
     /*

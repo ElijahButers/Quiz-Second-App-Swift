@@ -626,13 +626,20 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xwt-Zx-ULM">
                                         <rect key="frame" x="8" y="8" width="552" height="190"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSm-Y2-JNz">
+                                        <rect key="frame" x="8" y="8" width="552" height="190"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="xwt-Zx-ULM" firstAttribute="leading" secondItem="4yb-Pw-oua" secondAttribute="leading" constant="8" id="1Sk-eg-q2r"/>
+                                    <constraint firstAttribute="bottom" secondItem="gSm-Y2-JNz" secondAttribute="bottom" constant="8" id="I6g-O1-tx4"/>
                                     <constraint firstAttribute="trailing" secondItem="xwt-Zx-ULM" secondAttribute="trailing" constant="8" id="Oap-b8-PWu"/>
                                     <constraint firstAttribute="bottom" secondItem="xwt-Zx-ULM" secondAttribute="bottom" constant="8" id="VWq-yZ-uf6"/>
+                                    <constraint firstItem="gSm-Y2-JNz" firstAttribute="leading" secondItem="4yb-Pw-oua" secondAttribute="leading" constant="8" id="W61-Z1-xSv"/>
                                     <constraint firstItem="xwt-Zx-ULM" firstAttribute="top" secondItem="4yb-Pw-oua" secondAttribute="top" constant="8" id="kBW-5g-WtT"/>
+                                    <constraint firstAttribute="trailing" secondItem="gSm-Y2-JNz" secondAttribute="trailing" constant="8" id="l5y-89-BNf"/>
+                                    <constraint firstItem="gSm-Y2-JNz" firstAttribute="top" secondItem="4yb-Pw-oua" secondAttribute="top" constant="8" id="sgp-EJ-Fab"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rn9-S6-Mv8">
