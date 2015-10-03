@@ -327,6 +327,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="Eur-zV-JKX"/>
                                         </constraints>
+                                        <color key="progressTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </progressView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -356,6 +357,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="cardButton" destination="xLq-30-iHy" id="Nh1-ON-Hhf"/>
+                        <outlet property="progressView" destination="7rY-Sy-iWh" id="t7c-94-0nG"/>
                         <outlet property="questionLabel" destination="g0s-jc-h2d" id="X4r-KL-sX8"/>
                         <outletCollection property="answerButtons" destination="aMB-vd-pu5" collectionClass="NSMutableArray" id="dHb-xQ-b2z"/>
                         <outletCollection property="answerButtons" destination="cSB-aA-lQK" collectionClass="NSMutableArray" id="HWs-pO-RGe"/>
@@ -388,6 +390,7 @@
                                             <constraint firstAttribute="height" constant="2" id="UcA-GK-N2D"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="ojT-QM-yRI"/>
                                         </constraints>
+                                        <color key="progressTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </progressView>
                                 </subviews>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -483,6 +486,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="cardButton" destination="tdb-u9-msD" id="JDP-ih-erd"/>
+                        <outlet property="progressView" destination="nFJ-zX-57H" id="pkx-dw-ZAT"/>
                         <outlet property="questionLabel" destination="vwk-C2-w4N" id="kRo-mk-HFj"/>
                         <outletCollection property="answerButtons" destination="d1a-ba-9x5" collectionClass="NSMutableArray" id="OWJ-YF-A5u"/>
                         <outletCollection property="answerButtons" destination="Axb-GN-bF5" collectionClass="NSMutableArray" id="N2B-zm-oad"/>

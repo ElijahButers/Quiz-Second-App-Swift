@@ -16,7 +16,7 @@ class RightOrWrongViewController: UIViewController {
     
     @IBAction func answerButtonHandler(sender: UIButton) {
         
-        
+        timer.invalidate()
         if sender.titleLabel?.text == correctAnswer {
             print("Correct")
         } else {
@@ -45,6 +45,8 @@ class RightOrWrongViewController: UIViewController {
         nextQuestion()
     }
     
+    @IBOutlet weak var progressView: UIProgressView!
+    
     var correctAnswer: String?
     
     var question: String?
@@ -53,12 +55,16 @@ class RightOrWrongViewController: UIViewController {
     
     var questionIdx = 0
     
+    var timer = NSTimer()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor(patternImage: UIImage(named: "Night sky-png")!)
+        
+        progressView.transform = CGAffineTransformScale(progressView.transform, 1, 10)
         
         titlesForButtons()
     }
@@ -86,6 +92,44 @@ class RightOrWrongViewController: UIViewController {
         }
         
         questionLabel.text = question
+        startTimer()
+    }
+    
+    func startTimer() {
+        
+        progressView.progress = 1.0
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "updateProgressView", userInfo: nil, repeats: true)
+    }
+    
+    func updateProgressView() {
+        progressView.progress -= 0.01/30
+        if progressView.progress <= 0   {
+            outOfTime()
+        }
+    }
+    
+    func outOfTime() {
+        timer.invalidate()
+        showAlert()
+        disableButtons()
+    }
+    
+    func disableButtons() {
+        for button in answerButtons {
+            button.enabled = false
+        }
+    }
+    
+    func showAlert() {
+        
+        let alertController = UIAlertController(title: "Out of time!", message: "Too slow!", preferredStyle: .Alert)
+        
+        let ok = UIAlertAction(title: "OK", style: .Default, handler: { (alert: UIAlertAction!) in
+            })
+        
+        alertController.addAction(ok)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 
     /*
