@@ -15,7 +15,7 @@ class RightOrWrongViewController: UIViewController {
     @IBOutlet var answerButtons: [UIButton]!
     
     @IBAction func answerButtonHandler(sender: UIButton) {
-        
+        //Timer Validate
         timer.invalidate()
         if sender.titleLabel?.text == correctAnswer {
             print("Correct")
